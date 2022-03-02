@@ -1,0 +1,28 @@
+main {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 128px 0;
+
+  section {
+    margin: 8px;
+  }
+}
+
+:host {
+  position: relative;
+
+  app-decorative-squares {
+    position: absolute;
+    transform: rotate(135deg);
+    left: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  main {
+    h1 {
+      margin: 0 16px;
+    }
+  }
+}
