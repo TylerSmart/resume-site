@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
     { name: 'MongoDB', level: 3 },
     { name: 'Azure', level: 3 },
     { name: 'CI/CD', level: 2 },
-    { name: 'Python', level: 3 },
+    { name: 'Python', level: 2 },
   ];
 
   constructor() {}

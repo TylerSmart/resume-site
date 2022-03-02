@@ -7,8 +7,7 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -21,9 +20,9 @@ $resume-site-warn: mat.define-palette(mat.$red-palette);
 $resume-site-typography-config: mat.define-typography-config(
   $display-4:
     mat.define-typography-level(
-      $font-family: "Titillium Web",
+      $font-family: "Permanent Marker",
       $font-weight: bolder,
-      $font-size: clamp(56px, 8vw, 112px),
+      $font-size: clamp(56px, 8vw, 100px),
       $line-height: 1,
       $letter-spacing: normal,
     ),
@@ -53,9 +52,9 @@ $resume-site-typography-config: mat.define-typography-config(
     ),
   $headline:
     mat.define-typography-level(
-      $font-family: "Titillium Web",
+      $font-family: "Permanent Marker",
       $font-weight: bold,
-      $font-size: 28px,
+      $font-size: 40px,
       $line-height: 1,
       $letter-spacing: normal,
     ),
@@ -85,7 +84,7 @@ $resume-site-typography-config: mat.define-typography-config(
     ),
   $body-1:
     mat.define-typography-level(
-      $font-family: "Roboto Mono",
+      $font-family: "Titillium Web",
       $font-weight: 400,
       $font-size: 16px,
       $line-height: 24px,
@@ -93,7 +92,7 @@ $resume-site-typography-config: mat.define-typography-config(
     ),
   $body-2:
     mat.define-typography-level(
-      $font-family: "Roboto Mono",
+      $font-family: "Titillium Web",
       $font-weight: bold,
       $font-size: 16px,
       $line-height: 1,
@@ -110,7 +109,7 @@ $resume-site-typography-config: mat.define-typography-config(
   $button:
     mat.define-typography-level(
       $font-family: "Titillium Web",
-      $font-weight: 500,
+      $font-weight: 600,
       $font-size: 18px,
       $line-height: 1,
       $letter-spacing: normal,
@@ -161,6 +160,10 @@ ul {
 
 .mat-drawer-backdrop {
   backdrop-filter: blur(5px);
+}
+
+.mat-stroked-button {
+  border-width: 2px !important;
 }
 
 @mixin mix-app-theme($app-theme) {
