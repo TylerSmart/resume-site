@@ -32,14 +32,14 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Dibs 2.0',
       description:
-        'An improved version of scheduling app that integrates with Office 365. Displays schedule data for rooms in the office.',
+        'An improved version of a scheduling app that integrates with Office 365. Displays scheduling data for rooms in the office.',
       technologies: ['Azure', 'PnP.js', 'Angular', 'Express.js'],
       images: [],
     },
     {
       name: 'Savory Fund Office Calendar',
       description:
-        'A custom app that displays different pages to visualize data about office events and project data. Runs locally on a Raspberry Pi.',
+        'A web app that displays different pages to visualize data about office events and ongoing. Runs locally on a Raspberry Pi.',
       technologies: ['Angular', 'PnP.js', 'Express.js', 'monday.com'],
       images: [],
     },
