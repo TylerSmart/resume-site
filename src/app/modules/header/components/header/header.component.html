@@ -1,0 +1,29 @@
+<!-- <mat-toolbar> -->
+<mat-toolbar [@showHide]="(show$ | async) ? 'show' : 'hide'">
+  <main>
+    <img src="assets/images/logo.svg" alt="" />
+
+    <div id="links">
+      <ng-container *ngIf="!(mobile$ | async)!.matches; else mobile">
+        <a
+          *ngFor="let link of links"
+          mat-button
+          color="primary"
+          [href]="link.url"
+          >{{ link.name }}</a
+        >
+      </ng-container>
+
+      <ng-template #mobile>
+        <button
+          mat-icon-button
+          color="primary"
+          *ngIf="mobile$ | async"
+          (click)="drawer.emit()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </ng-template>
+    </div>
+  </main>
+</mat-toolbar>

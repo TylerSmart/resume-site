@@ -4,17 +4,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderModule } from './modules/header/header.module';
+import { HeroModule } from './modules/hero/hero.module';
+import { AboutModule } from './modules/about/about.module';
+import { CareerModule } from './modules/career/career.module';
+import { ContactModule } from './modules/contact/contact.module';
+import { ProjectsModule } from './modules/projects/projects.module';
+import { FooterModule } from './modules/footer/footer.module';
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    HeaderModule,
+    HeroModule,
+    AboutModule,
+    CareerModule,
+    ProjectsModule,
+    ContactModule,
+    FooterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,32 +1,127 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$resume-site-primary: mat.define-palette(mat.$indigo-palette);
-$resume-site-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$resume-site-primary: mat.define-palette(mat.$amber-palette, 700);
+$resume-site-accent: mat.define-palette(mat.$gray-palette);
 
 // The warn palette is optional (defaults to red).
 $resume-site-warn: mat.define-palette(mat.$red-palette);
 
+$resume-site-typography-config: mat.define-typography-config(
+  $display-4:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bolder,
+      $font-size: clamp(56px, 8vw, 112px),
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $display-3:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bold,
+      $font-size: clamp(28px, 4vw, 56px),
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $display-2:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bold,
+      $font-size: 45px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $display-1:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bold,
+      $font-size: 34px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $headline:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bold,
+      $font-size: 28px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $title:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: bold,
+      $font-size: 24px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $subheading-2:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: 400,
+      $font-size: 20px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $subheading-1:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: 400,
+      $font-size: 18px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $body-1:
+    mat.define-typography-level(
+      $font-family: "Roboto Mono",
+      $font-weight: 400,
+      $font-size: 16px,
+      $line-height: 24px,
+      $letter-spacing: normal,
+    ),
+  $body-2:
+    mat.define-typography-level(
+      $font-family: "Roboto Mono",
+      $font-weight: bold,
+      $font-size: 16px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+  $caption:
+    mat.define-typography-level(
+      $font-family: "Roboto Mono",
+      $font-weight: 400,
+      $font-size: 14px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
+);
+
+@include mat.core($resume-site-typography-config);
+
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$resume-site-theme: mat.define-light-theme((
-  color: (
-    primary: $resume-site-primary,
-    accent: $resume-site-accent,
-    warn: $resume-site-warn,
+$resume-site-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $resume-site-primary,
+      accent: $resume-site-accent,
+      warn: $resume-site-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -35,5 +130,83 @@ $resume-site-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+}
+
+.mat-drawer-backdrop {
+  backdrop-filter: blur(5px);
+}
+
+@mixin mix-app-theme($app-theme) {
+  $colors: (
+    primary: map-get($app-theme, primary),
+    accent: map-get($app-theme, accent),
+    warn: map-get($app-theme, warn),
+  );
+
+  @each $color-name, $color-value in $colors {
+    .#{$color-name}-50 {
+      color: mat.get-color-from-palette($color-value, 50);
+    }
+
+    .#{$color-name}-100 {
+      color: mat.get-color-from-palette($color-value, 100);
+    }
+
+    .#{$color-name}-200 {
+      color: mat.get-color-from-palette($color-value, 200);
+    }
+
+    .#{$color-name}-300 {
+      color: mat.get-color-from-palette($color-value, 300);
+    }
+
+    .#{$color-name}-400 {
+      color: mat.get-color-from-palette($color-value, 400);
+    }
+
+    .#{$color-name}-500 {
+      color: mat.get-color-from-palette($color-value, 500);
+    }
+
+    .#{$color-name}-600 {
+      color: mat.get-color-from-palette($color-value, 600);
+    }
+
+    .#{$color-name}-700 {
+      color: mat.get-color-from-palette($color-value, 700);
+    }
+
+    .#{$color-name}-800 {
+      color: mat.get-color-from-palette($color-value, 800);
+    }
+
+    .#{$color-name}-900 {
+      color: mat.get-color-from-palette($color-value, 900);
+    }
+
+    .mat-stroked-button[color="#{$color-name}"] {
+      border-color: mat.get-color-from-palette($color-value, 500);
+    }
+  }
+
+  a {
+    color: mat.get-color-from-palette(map-get($colors, primary), 700);
+    text-decoration: underline 0.15em #00000000;
+    transition: text-decoration-color 300ms;
+
+    &:hover {
+      text-decoration-color: mat.get-color-from-palette(
+        map-get($colors, primary),
+        700
+      );
+    }
+  }
+}
+@include mix-app-theme($resume-site-theme);

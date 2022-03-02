@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 0px;
+  height: 0px;
+  overflow: visible;
+
+  .squares {
+    display: grid;
+    grid-template:
+      "sq1 . sq2 sq3" auto
+      "sq4 . . sq5" auto
+      ". sq6 sq7 ." auto
+      "sq8 sq9 . sq10" auto / auto auto auto;
+    gap: 8px;
+
+    .square {
+      height: clamp(100px, 15vw, 150px);
+      width: clamp(100px, 15vw, 150px);
+      background-color: #ffffff0c;
+      border-radius: 10px;
+    }
+
+    .square:nth-of-type(1) {
+      grid-area: sq1;
+    }
+
+    @for $i from 1 through 16 {
+      .square:nth-of-type(#{$i}) {
+        grid-area: sq#{$i};
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+main {
+  height: 100vh;
+
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  section {
+    margin-bottom: 20vh;
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+    }
+
+    p {
+      max-width: 600px;
+    }
+  }
+
+  app-decorative-squares {
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  main {
+    margin: 0 16px;
+  }
+}
