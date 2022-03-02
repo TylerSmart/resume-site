@@ -6,6 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
+  skills: { name: string; level: number }[] = [
+    { name: 'JavaScript', level: 4 },
+    { name: 'TypeScript', level: 4 },
+    { name: 'Node.js', level: 4 },
+    { name: 'Angular', level: 3 },
+    { name: 'MongoDB', level: 3 },
+    { name: 'Azure', level: 3 },
+    { name: 'CI/CD', level: 2 },
+    { name: 'Python', level: 3 },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}

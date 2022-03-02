@@ -1,0 +1,21 @@
+main {
+  max-width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto min-content;
+
+  .skill-dots {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    gap: 8px;
+
+    .skill-dot {
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border-width: 3px;
+      border-style: solid;
+    }
+  }
+}

@@ -192,7 +192,7 @@ body {
     }
 
     .mat-stroked-button[color="#{$color-name}"] {
-      border-color: mat.get-color-from-palette($color-value, 500);
+      border-color: mat.get-color-from-palette($color-value, 700);
     }
   }
 
@@ -206,6 +206,15 @@ body {
         map-get($colors, primary),
         700
       );
+    }
+  }
+
+  .skill-dot {
+    border-color: mat.get-color-from-palette(map-get($colors, accent), 700);
+
+    &.filled {
+      border-color: mat.get-color-from-palette(map-get($colors, primary), 700);
+      background: mat.get-color-from-palette(map-get($colors, primary), 700);
     }
   }
 }
