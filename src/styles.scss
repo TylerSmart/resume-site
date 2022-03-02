@@ -104,7 +104,7 @@ $resume-site-typography-config: mat.define-typography-config(
       $font-family: "Roboto Mono",
       $font-weight: 400,
       $font-size: 14px,
-      $line-height: 1,
+      $line-height: 20px,
       $letter-spacing: normal,
     ),
 );
@@ -219,6 +219,10 @@ ul {
         700
       );
     }
+  }
+
+  .shade {
+    background: mat.get-color-from-palette(map-get($colors, accent), 900);
   }
 
   .skill-dot {

@@ -1,0 +1,29 @@
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 0 128px;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+:host {
+  position: relative;
+
+  app-decorative-squares {
+    position: absolute;
+    transform: rotate(135deg);
+    left: 100vw;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  main {
+    margin: 0 16px;
+  }
+}

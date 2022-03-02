@@ -1,0 +1,47 @@
+<main id="large" *ngIf="!(small$ | async)!.matches; else small">
+  <section>
+    <h2 class="primary-700">{{ project.name }}</h2>
+    <mat-card>
+      <mat-card-content>
+        <p class="mat-small">
+          {{ project.description }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <div class="technologies">
+      <div
+        class="technology mat-caption"
+        *ngFor="let technology of project.technologies"
+      >
+        {{ technology }}
+      </div>
+    </div>
+  </section>
+  <div class="image">
+    <div class="shade"></div>
+    <img [src]="project.images[0] ?? 'assets/images/placeholder.png'" alt="" />
+  </div>
+</main>
+
+<ng-template #small>
+  <main id="small">
+    <mat-card>
+      <mat-card-title class="primary-700">
+        <h2>{{ project.name }}</h2>
+      </mat-card-title>
+      <mat-card-content>
+        <p class="mat-small">
+          {{ project.description }}
+        </p>
+        <div class="technologies">
+          <div
+            class="technology mat-caption"
+            *ngFor="let technology of project.technologies"
+          >
+            {{ technology }}
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </main>
+</ng-template>

@@ -10,7 +10,11 @@
         <h4>{{ item.start }} - {{ item.end }}</h4>
 
         <ul>
-          <li *ngFor="let note of item.notes" [innerHtml]="note"></li>
+          <li
+            *ngFor="let note of item.notes"
+            class="mat-body"
+            [innerHtml]="note"
+          ></li>
         </ul>
       </section>
     </mat-tab>
