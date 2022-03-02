@@ -40,7 +40,7 @@ export class ProjectsComponent implements OnInit {
       name: 'Savory Fund Office Calendar',
       description:
         'A custom app that displays different pages to visualize data about office events and project data. Runs locally on a Raspberry Pi.',
-      technologies: ['Angular', 'PnP.js', 'Express.js', 'monday.com API'],
+      technologies: ['Angular', 'PnP.js', 'Express.js', 'monday.com'],
       images: [],
     },
   ];

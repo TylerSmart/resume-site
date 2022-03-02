@@ -12,6 +12,7 @@ import { ContactModule } from './modules/contact/contact.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { MaterialModule } from './modules/material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { MaterialModule } from './modules/material/material.module';
     ProjectsModule,
     ContactModule,
     FooterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

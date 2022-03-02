@@ -107,6 +107,14 @@ $resume-site-typography-config: mat.define-typography-config(
       $line-height: 20px,
       $letter-spacing: normal,
     ),
+  $button:
+    mat.define-typography-level(
+      $font-family: "Titillium Web",
+      $font-weight: 500,
+      $font-size: 18px,
+      $line-height: 1,
+      $letter-spacing: normal,
+    ),
 );
 
 @include mat.core($resume-site-typography-config);
