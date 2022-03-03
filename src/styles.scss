@@ -233,7 +233,7 @@ ul {
   }
 
   .shade {
-    background: mat.get-color-from-palette(map-get($colors, accent), 900);
+    background: mat.get-color-from-palette(map-get($colors, primary), 700);
   }
 
   .skill-dot {
