@@ -44,7 +44,7 @@ export class ProjectsComponent implements OnInit {
       name: 'Dibs 2.0',
       description:
         'An improved version of a scheduling app that integrates with Office 365. Displays scheduling data for rooms in the office.',
-      technologies: ['Azure', 'PnP.js', 'Angular', 'Express.js'],
+      technologies: ['Azure', 'PnP.js', 'Angular', 'Express.js', 'CI/CD'],
       images: ['assets/images/dibs-2/Calendar.png'],
     },
     {
@@ -55,6 +55,15 @@ export class ProjectsComponent implements OnInit {
       images: [
         'assets/images/savory-fund-office-calendar/Monthly Calendar.png',
       ],
+    },
+    {
+      name: 'Resume Site',
+      description:
+        'My personal site that contains my resume, information, and portfolio.',
+      technologies: ['Angular', 'GitHub Actions', 'Firebase'],
+      images: ['assets/images/resume-site/Hero.png'],
+      link: 'https://tylersmart.dev',
+      githubLink: 'https://github.com/TylerSmart/resume-site',
     },
   ];
 
