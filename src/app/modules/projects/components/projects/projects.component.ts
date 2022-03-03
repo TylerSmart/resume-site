@@ -13,7 +13,13 @@ export class ProjectsComponent implements OnInit {
       description:
         'A restaurant management web app. Brands can build custom forms and reports that pull data from their POS and time keeping APIs. Data is compiled into custom KPI reports.',
       technologies: ['Azure', 'Angular', 'Express.js', 'MongoDB', 'CI/CD'],
-      images: [],
+      images: [
+        'assets/images/ember-2/Brand Authentication.png',
+        'assets/images/ember-2/Brand KPI.png',
+        'assets/images/ember-2/Form Editor.png',
+        'assets/images/ember-2/Form Entry Editor.png',
+        'assets/images/ember-2/Store Authentication.png',
+      ],
     },
     {
       name: 'Swig Competition App',
@@ -27,21 +33,28 @@ export class ProjectsComponent implements OnInit {
         'MongoDB',
         'CI/CD',
       ],
-      images: [],
+      images: [
+        'assets/images/swig-competition-app/Home Page.png',
+        'assets/images/swig-competition-app/User Submission.png',
+        'assets/images/swig-competition-app/Submission Reviewer.png',
+        'assets/images/swig-competition-app/Leaderboard.png',
+      ],
     },
     {
       name: 'Dibs 2.0',
       description:
         'An improved version of a scheduling app that integrates with Office 365. Displays scheduling data for rooms in the office.',
       technologies: ['Azure', 'PnP.js', 'Angular', 'Express.js'],
-      images: [],
+      images: ['assets/images/dibs-2/Calendar.png'],
     },
     {
       name: 'Savory Fund Office Calendar',
       description:
         'A web app that displays different pages to visualize data about office events and ongoing. Runs locally on a Raspberry Pi.',
       technologies: ['Angular', 'PnP.js', 'Express.js', 'monday.com'],
-      images: [],
+      images: [
+        'assets/images/savory-fund-office-calendar/Monthly Calendar.png',
+      ],
     },
   ];
 
