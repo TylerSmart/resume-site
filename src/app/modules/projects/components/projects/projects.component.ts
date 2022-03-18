@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
       ],
     },
     {
-      name: 'Swig Competition App',
+      name: 'SwigVentures',
       description:
         'A PWA designed for a soda shop company to manage and approve user submissions for different challenges. Designed to be appealing for the target audience and easy to manage for the moderation team.',
       technologies: [
@@ -39,6 +39,7 @@ export class ProjectsComponent implements OnInit {
         'assets/images/swig-competition-app/Submission Reviewer.png',
         'assets/images/swig-competition-app/Leaderboard.png',
       ],
+      link: 'https://swigventures.com',
     },
     {
       name: 'Dibs 2.0',
