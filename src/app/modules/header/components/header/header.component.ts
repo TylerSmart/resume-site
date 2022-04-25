@@ -19,6 +19,7 @@ import {
 } from '@angular/core';
 import { MatDrawerContent, MatSidenavContent } from '@angular/material/sidenav';
 import { BehaviorSubject } from 'rxjs';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-header',
@@ -54,11 +55,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   mobile$ = this.breakpointObserver.observe(Breakpoints.Handset);
 
-  constructor(public breakpointObserver: BreakpointObserver) {
+  constructor(public breakpointObserver: BreakpointObserver, public analytics: GoogleAnalyticsService) {
     this.show$.subscribe(console.log);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngAfterViewInit() {
     const element = this.container?.getElementRef().nativeElement;

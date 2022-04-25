@@ -18,6 +18,7 @@
           color="primary"
           href="assets/documents/Tyler Smart - Resume.pdf"
           target="_blank"
+          (click)="analytics.eventEmitter('resume', 'engagement', 'click')"
           >Resume</a
         >
       </ng-container>

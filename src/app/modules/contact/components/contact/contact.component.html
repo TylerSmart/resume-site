@@ -7,7 +7,13 @@
     </p>
   </section>
   <br />
-  <a mat-stroked-button color="primary" href="mailto:inquiries@tylersmart.dev"
+  <a
+    mat-stroked-button
+    color="primary"
+    href="mailto:inquiries@tylersmart.dev"
+    (click)="
+      analytics.eventEmitter('contact-lower', 'engagement', 'click', 'contact')
+    "
     >Let's chat!</a
   >
 </main>
