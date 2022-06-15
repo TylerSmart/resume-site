@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [15.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm ci --force
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
