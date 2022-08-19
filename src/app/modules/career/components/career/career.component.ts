@@ -21,6 +21,16 @@ export class CareerComponent implements OnInit {
       ],
     },
     {
+      name: 'Implementation Consultant',
+      organization: 'EnhanceHCM',
+      url: 'https://enhancehcm.com/',
+      start: 'August 2022',
+      end: 'Present',
+      notes: [
+        'Produced solution to export sensitive employee information and documents from HR software to maintain compliance with new systems.',
+      ],
+    },
+    {
       name: 'B.S. Software Engineering',
       organization: 'Utah Valley University',
       url: 'https://www.uvu.edu/catalog/current/departments/computer-science/software-engineering-bs/',
