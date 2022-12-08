@@ -1,0 +1,24 @@
+<main>
+  <h1 class="accent-400">Education</h1>
+  <mat-tab-group mat-align-tabs="start" color="primary">
+    <mat-tab [label]="item.organization" *ngFor="let item of education">
+      <section>
+        <h3>
+          {{ item.name }}
+          <a [href]="item.url" target="_blank">@ {{ item.organization }}</a>
+        </h3>
+        <h4>{{ item.start }} - {{ item.end }}</h4>
+
+        <ul>
+          <li
+            *ngFor="let note of item.notes"
+            class="mat-body"
+            [innerHtml]="note"
+          ></li>
+        </ul>
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+</main>
+
+<app-decorative-squares></app-decorative-squares>

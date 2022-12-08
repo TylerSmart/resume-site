@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
+import { EducationModule } from './modules/education/education.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { GoogleAnalyticsService } from './services/google-analytics.service';
     HeroModule,
     AboutModule,
     CareerModule,
+    EducationModule,
     ProjectsModule,
     ContactModule,
     FooterModule,
@@ -36,12 +38,10 @@ import { GoogleAnalyticsService } from './services/google-analytics.service';
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [
-    GoogleAnalyticsService
-  ],
+  providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
