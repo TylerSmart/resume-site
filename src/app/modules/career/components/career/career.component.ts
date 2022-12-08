@@ -30,18 +30,6 @@ export class CareerComponent implements OnInit {
         'Produced solution to export sensitive employee information and documents from HR software to maintain compliance with new systems.',
       ],
     },
-    {
-      name: 'B.S. Software Engineering',
-      organization: 'Utah Valley University',
-      url: 'https://www.uvu.edu/catalog/current/departments/computer-science/software-engineering-bs/',
-      start: 'August 2018',
-      end: 'Present',
-      notes: [
-        'Expected to graduate in Fall 2022.',
-        'Average overall GPA of 3.72.',
-        'Electives included Web Programming, C# Software Development, and Java Software Development.',
-      ],
-    },
   ];
 
   constructor() {}
