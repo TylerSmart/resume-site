@@ -20,8 +20,8 @@ main {
 
   app-decorative-squares {
     position: absolute;
-    transform: rotate(45deg);
-    left: 0;
+    transform: rotate(-45deg);
+    left: 100vw;
     top: 0;
   }
 }
