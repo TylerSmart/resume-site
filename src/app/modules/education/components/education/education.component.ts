@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class EducationComponent {
   education = [
     {
-      name: 'B.S. Software Engineering',
+      degree: 'B.S. Software Engineering',
       school: 'Utah Valley University',
       url: 'https://www.uvu.edu/catalog/current/departments/computer-science/software-engineering-bs/',
       start: 'Fall 2018',
